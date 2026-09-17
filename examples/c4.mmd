@@ -1,0 +1,7 @@
+C4Context
+    title Workshop booking context
+    Person(maker, "Maker", "Finds and joins a workshop")
+    System(booking, "Booking system", "Organizes workshop places")
+    System_Ext(email, "Email service", "Delivers confirmations")
+    Rel(maker, booking, "Books a place")
+    Rel(booking, email, "Requests confirmation")

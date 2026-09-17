@@ -1,0 +1,19 @@
+classDiagram
+    class Instrument {
+        +String name
+        +String version
+        +open()
+        +export()
+    }
+    class Diagram {
+        +String source
+        +validate()
+        +render()
+    }
+    class Snapshot {
+        +Date created
+        +String source
+        +restore()
+    }
+    Instrument "1" *-- "many" Diagram
+    Diagram "1" *-- "many" Snapshot

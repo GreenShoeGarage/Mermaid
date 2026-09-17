@@ -1,0 +1,22 @@
+MERMAID — DIAGRAM WORKBENCH v1.0.0
+Green Shoe Garage / Field Instrument
+
+OPEN THIS FILE IN YOUR BROWSER:
+    MERMAID-Workbench-v1.0.0.html
+
+That is the self-contained offline edition. No installation or server needed.
+Use a normal browser window; some document-preview panes do not run JavaScript.
+
+For a website, upload the complete static runtime:
+    index.html, renderer.html, manifest.webmanifest, sw.js
+    assets/, vendor/, src/, licenses/
+
+Do not upload only index.html: it needs the adjacent folders.
+Do not replace an existing project with this package without a backup.
+
+IMPORTANT: the green indicator means saved IN THIS BROWSER.
+Choose Back up workspace to download independent editable JSON.
+Browser-data clearing and file-location changes can affect local storage.
+
+Read README.md for features, screenshots, hosting, limits, and testing caveats.
+No website or repository has been deployed by this download.

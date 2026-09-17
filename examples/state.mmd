@@ -1,0 +1,10 @@
+stateDiagram-v2
+    [*] --> Received
+    Received --> Diagnosing: Open the case
+    Diagnosing --> Repairing: Fault found
+    Diagnosing --> Waiting: Need a part
+    Waiting --> Repairing: Part arrives
+    Repairing --> Testing
+    Testing --> Repairing: Try again
+    Testing --> Returned: Works safely
+    Returned --> [*]

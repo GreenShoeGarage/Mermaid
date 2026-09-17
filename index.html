@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="A local-first Mermaid diagram viewer and editor from Green Shoe Garage. Write, inspect, recover, and export diagrams without an account or cloud service.">
+<meta name="theme-color" content="#141d25">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'none'; connect-src 'none'; frame-src 'self' blob: data:; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>MERMAID · Diagram Workbench · Green Shoe Garage</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="vendor/codemirror.css"><link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<a class="skip-link" href="#source-region">Skip to source editor</a>
+<div id="app" class="app-shell" data-mode="easy" data-layout="split">
+<header class="app-header">
+  <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M3 21 11 7l5 9 5-9 8 14M3 26h26"/></svg></span><div><h1>MERMAID<span class="version">v1.0</span></h1><p>DIAGRAM WORKBENCH</p></div></div>
+  <nav class="main-nav" aria-label="Main navigation"><button class="nav-button selected" data-action="workbench">Workbench</button><button class="nav-button" data-action="templates">Templates <span class="count">24</span></button><button class="nav-button" data-action="guide">Field guide</button></nav>
+  <div class="header-tools"><span id="save-state" class="save-state" role="status" aria-live="polite"><i class="led"></i><span>Opening workspace</span></span><button id="mode-button" class="mode-button" data-action="mode" title="Switch between Easy and Advanced mode">Easy mode <span>⌄</span></button><button class="icon-button" data-action="theme" data-icon="sun" aria-label="Switch application theme" title="Switch theme: dark, light, high contrast"></button><button class="icon-button" data-action="settings" data-icon="settings" aria-label="Workspace settings" title="Workspace settings"></button></div>
+</header>
+<div id="global-alert" class="global-alert" role="alert" hidden></div>
+<div class="workspace">
+<aside id="library" class="library" aria-label="Diagram library">
+  <div class="library-heading"><span class="eyebrow">YOUR WORKSPACE</span><button class="icon-button small" data-action="workspace-menu" data-icon="more" aria-label="Workspace actions" title="Workspace actions"></button></div>
+  <button class="new-button" data-action="new"><span data-icon="plus"></span>New diagram<span class="key-hint">⌘ N</span></button>
+  <label class="search-box"><span data-icon="search"></span><input id="library-search" type="search" placeholder="Find a diagram…" aria-label="Search diagrams"></label>
+  <div class="library-filter"><button id="all-filter" class="selected" data-action="all-filter">All diagrams <span id="document-count">0</span></button><button id="favorite-filter" data-action="favorite-filter" data-icon="star" aria-label="Show favorites" title="Show favorites"></button><select id="library-sort" aria-label="Sort diagrams"><option value="updated">Recent</option><option value="title">A–Z</option><option value="type">Type</option></select></div>
+  <div id="document-list" class="document-list"></div>
+  <div class="library-actions"><button data-action="import"><span data-icon="upload"></span>Import diagrams</button><button data-action="backup"><span data-icon="archive"></span>Back up workspace</button></div>
+  <div class="library-foot"><span class="eyebrow">GREEN SHOE GARAGE</span><p>A little clarity.<br>A lot of possibility.</p><span id="offline-state" class="offline-label"><i class="led"></i>Local-first · no telemetry</span></div>
+</aside>
+<main class="main-workbench">
+  <section class="document-heading" aria-label="Current diagram">
+    <div class="document-title-group"><div class="breadcrumb"><button class="icon-button small" data-action="sidebar" data-icon="sidebar" aria-label="Toggle diagram library" title="Toggle library"></button><span>FIELD INSTRUMENT</span><span class="slash">/</span><span id="type-breadcrumb">FLOWCHART</span></div><div class="document-name-row"><input id="document-title" aria-label="Diagram title" value="Opening workspace…" maxlength="120"><button id="favorite-button" class="icon-button small" data-action="favorite" data-icon="star" aria-label="Favorite diagram" title="Favorite diagram"></button><button class="icon-button small" data-action="document-menu" data-icon="more" aria-label="Diagram actions" title="Diagram actions"></button></div><div class="document-subtitle"><span id="document-subtitle">Your source. Your device. Your diagram.</span></div></div>
+    <div class="document-tools"><div class="segmented layout-switch" aria-label="Editor layout"><button data-action="layout-source" data-icon="code" title="Source only" aria-label="Source only"></button><button class="selected" data-action="layout-split" data-icon="columns" title="Source and preview" aria-label="Source and preview"></button><button data-action="layout-preview" data-icon="image" title="Preview only" aria-label="Preview only"></button></div><button class="button secondary" data-action="inspector"><span data-icon="sliders"></span><span class="optional-label">Inspector</span></button><button class="button primary" data-action="export"><span data-icon="download"></span>Export</button></div>
+  </section>
+  <div class="mobile-tabs"><button class="selected" data-action="mobile-source">Source</button><button data-action="mobile-preview">Preview</button></div>
+  <div id="work-area" class="work-area">
+    <section id="source-region" class="source-pane pane" aria-label="Mermaid source editor" tabindex="-1">
+      <header class="pane-header"><div><span class="eyebrow">SOURCE</span><span class="file-type">.mmd</span></div><div class="pane-tools"><button class="icon-button small" data-action="undo" data-icon="undo" aria-label="Undo" title="Undo · ⌘/Ctrl Z"></button><button class="icon-button small" data-action="redo" data-icon="redo" aria-label="Redo" title="Redo · ⌘/Ctrl Shift Z"></button><span class="tool-divider"></span><button class="icon-button small" data-action="search" data-icon="search" aria-label="Find and replace in source" title="Find and replace · ⌘/Ctrl F"></button><button class="icon-button small" data-action="wrap" data-icon="wrap" aria-label="Toggle line wrapping" title="Toggle line wrapping" aria-pressed="true"></button><button class="insert-button" data-action="insert"><span data-icon="plus"></span>Insert</button></div></header>
+      <div class="editor-container"><textarea id="source-editor" aria-label="Mermaid source" spellcheck="false"></textarea></div>
+      <div id="problems" class="problems" hidden><div class="problem-head"><strong id="problem-title">Needs attention</strong><button class="link-button" data-action="error-line">Go to line <span id="error-line"></span></button></div><pre id="problem-detail"></pre><span id="problem-hint"></span></div>
+      <footer class="source-status"><span id="cursor-position">Ln 1, Col 1</span><span id="source-size">0 lines</span><span class="status-spacer"></span><button data-action="render" title="Validate and render · ⌘/Ctrl Enter"><span data-icon="play"></span>Render</button></footer>
+    </section>
+    <div id="splitter" class="splitter" role="separator" tabindex="0" aria-orientation="vertical" aria-label="Resize source and preview panes" aria-valuemin="25" aria-valuemax="70" aria-valuenow="44"></div>
+    <section id="preview-region" class="preview-pane pane" aria-label="Diagram preview">
+      <header class="pane-header"><div class="preview-label"><span class="eyebrow">LIVE PREVIEW</span><span id="render-badge" class="render-badge">Ready</span></div><div class="pane-tools"><label class="live-toggle"><input id="live-toggle" type="checkbox" checked><span class="switch"></span><span>Live</span></label><button class="icon-button small" data-action="present" data-icon="maximize" aria-label="Presentation view" title="Presentation view · Escape to leave"></button></div></header>
+      <div id="canvas" class="canvas grid" tabindex="0" role="region" aria-label="Diagram canvas. Drag to pan, scroll to zoom, and use arrow keys to pan."><div class="canvas-top"><span class="canvas-document-label" id="canvas-title">Diagram</span><select id="diagram-theme" aria-label="Diagram color theme"><option value="paper">Paper</option><option value="forest">Forest</option><option value="ocean">Ocean</option><option value="night">Night</option><option value="mono">Monochrome</option></select></div><div id="diagram-transform" class="diagram-transform"><img id="diagram-image" alt="Diagram preview" draggable="false" hidden></div><div id="empty-preview" class="empty-preview"><span data-icon="diagram"></span><h2>Make the idea visible.</h2><p>Write Mermaid on the left.<br>Your diagram takes shape here.</p><button class="button secondary" data-action="templates">Explore templates</button></div><div id="stale-banner" class="stale-banner" hidden>Last valid preview · current source has changed</div><div class="canvas-bottom"><span id="canvas-hint">Drag to pan · scroll to zoom</span><div class="zoom-controls"><button data-action="zoom-out" data-icon="minus" aria-label="Zoom out" title="Zoom out"></button><button id="zoom-value" data-action="zoom-reset" title="Reset to 100%">100%</button><button data-action="zoom-in" data-icon="plus" aria-label="Zoom in" title="Zoom in"></button><span></span><button data-action="fit" data-icon="fit" aria-label="Fit diagram to view" title="Fit to view · F"></button></div></div></div>
+      <footer class="preview-status"><span id="render-state"><i class="led"></i>Waiting for source</span><span id="render-metrics"></span></footer>
+    </section>
+    <aside id="inspector" class="inspector pane" hidden aria-label="Diagram inspector"><header class="pane-header"><strong>Inspector</strong><button class="icon-button small" data-action="inspector" data-icon="close" aria-label="Close inspector"></button></header><div class="inspector-tabs"><button class="selected" data-inspector="build">Build</button><button data-inspector="appearance">Style</button><button data-inspector="history">History</button><button data-inspector="notes">Notes</button></div><div id="inspector-content" class="inspector-content"></div></aside>
+  </div>
+  <footer class="workbench-footer"><span><span class="privacy-dot"></span>PRIVATE BY DESIGN<span class="footer-separator">·</span>No account. No cloud.</span><button data-action="commands"><span data-icon="command"></span>Commands <kbd>⌘ K</kbd></button><button data-action="shortcuts">Keyboard shortcuts <kbd>?</kbd></button></footer>
+</main>
+</div>
+</div>
+<dialog id="modal" class="modal"><div class="modal-header"><div><span id="modal-eyebrow" class="eyebrow">MERMAID WORKBENCH</span><h2 id="modal-title"></h2></div><button class="icon-button" data-action="close-modal" data-icon="close" aria-label="Close dialog"></button></div><div id="modal-content" class="modal-content"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<div id="context-menu" class="context-menu" role="menu" hidden></div>
+<div id="drop-overlay" class="drop-overlay" hidden><span data-icon="upload"></span><h2>Give your diagram a home.</h2><p>Drop Mermaid, Markdown, SVG with source, or workspace JSON.</p></div>
+<input id="file-input" type="file" accept=".mmd,.mermaid,.md,.markdown,.txt,.json,.svg" multiple hidden>
+<div id="renderer-host" aria-hidden="true"></div><div id="print-report"></div>
+<noscript><div class="no-script"><h2>MERMAID Diagram Workbench</h2><p>This local-first diagram viewer and editor requires JavaScript. It supports Mermaid source, local autosave, templates, snapshots, and SVG, PNG, and JSON export. No account or telemetry is required.</p></div></noscript>
+<script src="vendor/codemirror.js"></script><script src="vendor/codemirror-addons.js"></script><script src="vendor/jszip.min.js"></script><script src="src/core.js"></script><script src="src/templates.js"></script><script src="src/app.js"></script>
+</body></html>

@@ -1,0 +1,23 @@
+erDiagram
+    BIN ||--o{ PART : contains
+    PROJECT ||--o{ ALLOCATION : needs
+    PART ||--o{ ALLOCATION : supplies
+    BIN {
+        string id PK
+        string label
+        string location
+    }
+    PART {
+        string id PK
+        string name
+        int quantity
+    }
+    PROJECT {
+        string id PK
+        string title
+    }
+    ALLOCATION {
+        string project_id FK
+        string part_id FK
+        int quantity
+    }

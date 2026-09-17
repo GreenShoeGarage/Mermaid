@@ -1,0 +1,12 @@
+requirementDiagram
+    requirement local_first {
+        id: R1
+        text: Works without an internet connection
+        risk: medium
+        verifymethod: test
+    }
+    element offline_test {
+        type: "test"
+        docref: "Test record 01"
+    }
+    offline_test - verifies -> local_first

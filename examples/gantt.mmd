@@ -1,0 +1,15 @@
+gantt
+    title A four-week prototype
+    dateFormat YYYY-MM-DD
+    axisFormat %b %d
+    excludes weekends
+    section Discover
+    Understand the need :done, need, 2026-09-21, 3d
+    Sketch alternatives :sketch, after need, 2d
+    section Make
+    Electronics :electronics, after sketch, 5d
+    Enclosure :enclosure, after sketch, 5d
+    Firmware :firmware, after electronics, 4d
+    section Learn
+    Test and refine :test, after firmware, 4d
+    Share the result :milestone, after test, 0d

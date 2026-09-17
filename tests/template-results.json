@@ -1,0 +1,194 @@
+[
+  {
+    "id": "flow",
+    "kind": "rendered",
+    "width": 464.76483154296875,
+    "height": 590.546875,
+    "elapsed": 113,
+    "message": null
+  },
+  {
+    "id": "sequence",
+    "kind": "rendered",
+    "width": 704,
+    "height": 565,
+    "elapsed": 46,
+    "message": null
+  },
+  {
+    "id": "state",
+    "kind": "rendered",
+    "width": 213.52734375,
+    "height": 697,
+    "elapsed": 90,
+    "message": null
+  },
+  {
+    "id": "class",
+    "kind": "rendered",
+    "width": 188.84375,
+    "height": 565,
+    "elapsed": 65,
+    "message": null
+  },
+  {
+    "id": "er",
+    "kind": "rendered",
+    "width": 521.140625,
+    "height": 649,
+    "elapsed": 65,
+    "message": null
+  },
+  {
+    "id": "gantt",
+    "kind": "rendered",
+    "width": 1424,
+    "height": 268,
+    "elapsed": 30,
+    "message": null
+  },
+  {
+    "id": "mindmap",
+    "kind": "rendered",
+    "width": 2130.2109375,
+    "height": 245.578125,
+    "elapsed": 77,
+    "message": null
+  },
+  {
+    "id": "timeline",
+    "kind": "rendered",
+    "width": 1190,
+    "height": 700.078125,
+    "elapsed": 32,
+    "message": null
+  },
+  {
+    "id": "journey",
+    "kind": "rendered",
+    "width": 1500,
+    "height": 540,
+    "elapsed": 16,
+    "message": null
+  },
+  {
+    "id": "pie",
+    "kind": "rendered",
+    "width": 617.84375,
+    "height": 450,
+    "elapsed": 58,
+    "message": null
+  },
+  {
+    "id": "quadrant",
+    "kind": "rendered",
+    "width": 500,
+    "height": 500,
+    "elapsed": 15,
+    "message": null
+  },
+  {
+    "id": "git",
+    "kind": "rendered",
+    "width": 418.9140625,
+    "height": 187.25689697265625,
+    "elapsed": 34,
+    "message": null
+  },
+  {
+    "id": "requirement",
+    "kind": "rendered",
+    "width": 336.328125,
+    "height": 385,
+    "elapsed": 37,
+    "message": null
+  },
+  {
+    "id": "c4",
+    "kind": "rendered",
+    "width": 1148,
+    "height": 486,
+    "elapsed": 40,
+    "message": null
+  },
+  {
+    "id": "sankey",
+    "kind": "rendered",
+    "width": 600,
+    "height": 400,
+    "elapsed": 14,
+    "message": null
+  },
+  {
+    "id": "xy",
+    "kind": "rendered",
+    "width": 700,
+    "height": 500,
+    "elapsed": 26,
+    "message": null
+  },
+  {
+    "id": "block",
+    "kind": "rendered",
+    "width": 223.390625,
+    "height": 68,
+    "elapsed": 20,
+    "message": null
+  },
+  {
+    "id": "packet",
+    "kind": "rendered",
+    "width": 1026,
+    "height": 188,
+    "elapsed": 12,
+    "message": null
+  },
+  {
+    "id": "architecture",
+    "kind": "rendered",
+    "width": 447.1865539550781,
+    "height": 262,
+    "elapsed": 87,
+    "message": null
+  },
+  {
+    "id": "kanban",
+    "kind": "rendered",
+    "width": 630,
+    "height": 134,
+    "elapsed": 24,
+    "message": null
+  },
+  {
+    "id": "radar",
+    "kind": "rendered",
+    "width": 700,
+    "height": 700,
+    "elapsed": 20,
+    "message": null
+  },
+  {
+    "id": "treemap",
+    "kind": "rendered",
+    "width": 996,
+    "height": 371,
+    "elapsed": 62,
+    "message": null
+  },
+  {
+    "id": "subgraph",
+    "kind": "rendered",
+    "width": 898.328125,
+    "height": 375.09124755859375,
+    "elapsed": 31,
+    "message": null
+  },
+  {
+    "id": "blank",
+    "kind": "rendered",
+    "width": 233.1875,
+    "height": 160,
+    "elapsed": 12,
+    "message": null
+  }
+]

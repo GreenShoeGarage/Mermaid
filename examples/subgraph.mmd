@@ -1,0 +1,9 @@
+flowchart LR
+    subgraph DEVICE["On your device"]
+        EDIT["Edit source"] --> VALIDATE["Validate"]
+        VALIDATE --> PREVIEW["Render preview"]
+        EDIT --> SAVE[("Local workspace")]
+    end
+    SAVE --> JSON["Portable JSON backup"]
+    PREVIEW --> SVG["SVG or PNG"]
+    PREVIEW --> REPORT["Print-ready report"]

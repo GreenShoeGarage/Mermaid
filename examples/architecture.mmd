@@ -1,0 +1,5 @@
+architecture-beta
+    group local(cloud)[Local network]
+    service app(server)[Workbench] in local
+    service data(database)[Storage] in local
+    app:R -- L:data

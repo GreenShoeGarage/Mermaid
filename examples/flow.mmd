@@ -1,0 +1,17 @@
+flowchart TD
+    accTitle: From idea to something real
+    accDescr: An idea moves through sketching, making, testing, and sharing. Testing can lead back to making.
+
+    IDEA(["A small, good idea"]) --> SKETCH["Sketch the possibility"]
+    SKETCH --> MAKE["Make a first version"]
+    MAKE --> TEST{"Does it do the job?"}
+    TEST -->|Not quite| LEARN["Learn one useful thing"]
+    LEARN --> MAKE
+    TEST -->|Good enough| SHARE(["Share it with the world"])
+
+    classDef seed fill:#ddefbc,stroke:#637b3b,color:#213418
+    classDef action fill:#e5eafa,stroke:#8292b8,color:#293959
+    classDef question fill:#ffe9bc,stroke:#b48e46,color:#604810
+    class IDEA,SHARE seed
+    class SKETCH,MAKE,LEARN action
+    class TEST question

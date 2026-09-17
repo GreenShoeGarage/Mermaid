@@ -1,0 +1,254 @@
+{
+  "environment": "Chromium / about:blank / explicit storage and download shims",
+  "tests": [
+    {
+      "test": "initial source renders in isolated iframe",
+      "result": "pass"
+    },
+    {
+      "test": "initial autosave reaches saved state",
+      "result": "pass"
+    },
+    {
+      "test": "renderer sandbox lacks same-origin permission",
+      "result": "pass"
+    },
+    {
+      "test": "24 template choices",
+      "result": "pass"
+    },
+    {
+      "test": "template search narrows choices",
+      "result": "pass"
+    },
+    {
+      "test": "syntax error preserves last valid preview",
+      "result": "pass"
+    },
+    {
+      "test": "syntax error is visible with last-valid warning",
+      "result": "pass"
+    },
+    {
+      "test": "stale image exports blocked by default",
+      "result": "pass"
+    },
+    {
+      "test": "explicit stale SVG filename is marked",
+      "result": "pass"
+    },
+    {
+      "test": "stale SVG embeds correct prior source",
+      "result": "pass"
+    },
+    {
+      "test": "correcting source clears error",
+      "result": "pass"
+    },
+    {
+      "test": "manual mode does not render until requested",
+      "result": "pass"
+    },
+    {
+      "test": "new editable document created",
+      "result": "pass"
+    },
+    {
+      "test": "guided node writes valid escaped source",
+      "result": "pass"
+    },
+    {
+      "test": "guided connection changes source",
+      "result": "pass"
+    },
+    {
+      "test": "named snapshot can become baseline",
+      "result": "pass"
+    },
+    {
+      "test": "comparison contains added source",
+      "result": "pass"
+    },
+    {
+      "test": "restore preserves prior version in snapshot",
+      "result": "pass"
+    },
+    {
+      "test": "advanced registers and findings stored",
+      "result": "pass"
+    },
+    {
+      "test": "finding can be resolved",
+      "result": "pass"
+    },
+    {
+      "test": "appearance changes render",
+      "result": "pass"
+    },
+    {
+      "test": "unsupported security override rejected",
+      "result": "pass"
+    },
+    {
+      "test": "SVG export contains editable metadata",
+      "result": "pass"
+    },
+    {
+      "test": "quoted labels are rendered as characters, not entity names",
+      "result": "pass"
+    },
+    {
+      "test": "PNG export is actual raster image",
+      "result": "pass"
+    },
+    {
+      "test": "PNG safety limit rejects oversize canvas",
+      "result": "pass"
+    },
+    {
+      "test": "standalone report carries context and source",
+      "result": "pass"
+    },
+    {
+      "test": "report embedded image decodes",
+      "result": "pass"
+    },
+    {
+      "test": "export-source prepares a download",
+      "result": "pass"
+    },
+    {
+      "test": "export-markdown prepares a download",
+      "result": "pass"
+    },
+    {
+      "test": "export-document prepares a download",
+      "result": "pass"
+    },
+    {
+      "test": "export-html prepares a download",
+      "result": "pass"
+    },
+    {
+      "test": "workspace ZIP contains backup and every source",
+      "result": "pass"
+    },
+    {
+      "test": "clipboard fallback offers exact editable source",
+      "result": "pass"
+    },
+    {
+      "test": "SVG embedded-source import round trips without replacing documents",
+      "result": "pass"
+    },
+    {
+      "test": "Markdown import extracts two diagrams",
+      "result": "pass"
+    },
+    {
+      "test": "invalid import leaves existing documents intact",
+      "result": "pass"
+    },
+    {
+      "test": "duplicate creates independent document",
+      "result": "pass"
+    },
+    {
+      "test": "confirmed delete removes only selected diagram",
+      "result": "pass"
+    },
+    {
+      "test": "session undo restores deleted document",
+      "result": "pass"
+    },
+    {
+      "test": "stored JSON rehydrates documents and settings",
+      "result": "pass"
+    },
+    {
+      "test": "quota failure returns false",
+      "result": "pass"
+    },
+    {
+      "test": "quota failure keeps work and displays backup warning",
+      "result": "pass"
+    },
+    {
+      "test": "retry succeeds and clears stale save warning",
+      "result": "pass"
+    },
+    {
+      "test": "cross-tab update pauses saves",
+      "result": "pass"
+    },
+    {
+      "test": "conflict merge retains both sets",
+      "result": "pass"
+    },
+    {
+      "test": "workspace import waits for user choice",
+      "result": "pass"
+    },
+    {
+      "test": "explicit workspace restore succeeds",
+      "result": "pass"
+    },
+    {
+      "test": "light UI theme applied",
+      "result": "pass"
+    },
+    {
+      "test": "high-contrast UI theme applied",
+      "result": "pass"
+    },
+    {
+      "test": "presentation mode opens",
+      "result": "pass"
+    },
+    {
+      "test": "Fresh Start requires typed confirmation",
+      "result": "pass"
+    },
+    {
+      "test": "Fresh Start is truly empty",
+      "result": "pass"
+    },
+    {
+      "test": "creating after Fresh Start works",
+      "result": "pass"
+    },
+    {
+      "test": "main page has no uncaught runtime errors",
+      "result": "pass"
+    },
+    {
+      "test": "no HTTP runtime requests observed",
+      "result": "pass"
+    },
+    {
+      "test": "storage denial does not stop rendering",
+      "result": "pass"
+    },
+    {
+      "test": "corrupt stored payload remains recoverable",
+      "result": "pass"
+    },
+    {
+      "test": "mobile viewport has no horizontal page overflow",
+      "result": "pass"
+    },
+    {
+      "test": "mobile opens on source with preview tab",
+      "result": "pass"
+    },
+    {
+      "test": "mobile preview tab reveals readable diagram",
+      "result": "pass"
+    },
+    {
+      "test": "mobile inspector fits viewport",
+      "result": "pass"
+    }
+  ],
+  "uncaughtErrors": []
+}

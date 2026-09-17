@@ -1,0 +1,14 @@
+sequenceDiagram
+    autonumber
+    actor Maker
+    participant App as Workbench
+    participant Store as Local storage
+    Maker->>App: Change a diagram
+    App->>App: Validate source
+    alt Valid syntax
+        App-->>Maker: Show updated preview
+    else Needs attention
+        App-->>Maker: Keep last valid preview
+    end
+    App->>Store: Save editable source
+    Store-->>App: Saved on this device
